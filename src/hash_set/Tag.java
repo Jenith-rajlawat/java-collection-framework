@@ -44,6 +44,9 @@ public class Tag {
 		return name.equals(tag.name);
 	}
 	
+	
+	//It's important that if two objects are equal,
+	//their hash codes should be the same.
 	@Override
 	public int hashCode() {
 		return name.hashCode();
