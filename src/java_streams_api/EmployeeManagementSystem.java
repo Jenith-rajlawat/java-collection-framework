@@ -2,6 +2,8 @@ package java_streams_api;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class EmployeeManagementSystem {
 
@@ -58,6 +60,22 @@ public class EmployeeManagementSystem {
 		//Calculating Average Age
 		double averageAge= developers.stream().mapToInt(Employee::getAge).average().orElse(0);
 		System.out.println("Average Age of Developers: "+averageAge);
+		
+		
+		
+		
+		//------------------------------------------------------------------
+		//CHAINING OPERATIONS
+		//--------------------------------------------------------------------
+		List<String> result =employees.stream().filter(e->e.getAge()>55).map(Employee::getFirstName).toList();
+		System.out.println("Result: "+result);
+		
+		
+		//------------------------------------------------------------------
+		//Grouping and Collecting
+		//-------------------------------------------------------------------
+		Map<String,List<Employee>> employeesByRole =employees.stream().collect(Collectors.groupingBy(Employee::getDesignation));
+		System.out.println("Employees by role: " +employeesByRole);
 	}
 	
 	
