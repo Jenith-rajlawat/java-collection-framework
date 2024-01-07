@@ -26,6 +26,15 @@ public static int factorial(int n) {
 	//Recursive case
 	// if n=5  5X4!
 	return n*factorial(n-1);
+	
+	
+/* --------   stack ho yo reverse ma store hudaixa                                                     
+ * 5*fac(4);											5*24 ---> fac(5)=120 so it is returned
+ * 4* fac(3);											4*6 --->fac(4)=24s
+ * 3* fac(2);											3*2 --->fac(3)=6
+ * 2 * fac(1);											2*1; --> fac(2)=2
+ * fac(1)-->1 by base case so aba pop hudai janxa        
+ *  */
 }
 
 	public static void main(String... args) {
