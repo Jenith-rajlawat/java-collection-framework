@@ -7,11 +7,11 @@ import java.util.Queue;
 
 class Graph {
     private int vertexCount;
-    private List<List<Integer>> adjList;
+    private List<List<Integer>> adjList; // list of integers is kept as list
 
     public Graph(int vertexCount) {
         this.vertexCount = vertexCount;
-        this.adjList = new ArrayList<>(vertexCount);
+        this.adjList = new ArrayList<>(vertexCount); // Arraylist of vertexCount is added to adjList i.e. list kept in a list
 
         for (int i = 0; i < vertexCount; i++) {
             adjList.add(new ArrayList<>());
