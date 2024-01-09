@@ -15,7 +15,7 @@ class Graph {
 
         for (int i = 0; i < vertexCount; i++) {
             adjList.add(new ArrayList<>());
-        }
+        }// as the vertexCount is increased the adjList add the arrayList
     }
 
     public void addEdge(int source, int destination) {
