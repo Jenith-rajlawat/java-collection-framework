@@ -21,7 +21,7 @@ class Graph {
     public void addEdge(int source, int destination) {
         adjList.get(source).add(destination);
         adjList.get(destination).add(source);
-    }
+    }// this code adds the edges between the source and destination
 
     public List<Integer> getNeighbors(int vertex) {
         return adjList.get(vertex);
@@ -62,6 +62,6 @@ public class BFSExample {
         graph.addEdge(2, 5);
 
         System.out.print("BFS starting from vertex 0: ");
-        bfs(graph, 0);
+        bfs(graph, 0); //this prints all the vertex strating from the start edge and then ends where the addEdge allocates the destination to
     }
 }
