@@ -22,13 +22,13 @@ public class Fibonacci {
             return memo.get(n);
         }
 
-        int result = fibonacci(n - 1) + fibonacci(n - 2);
+        int result = fibonacci(n - 1) + fibonacci(n - 2); // Recursion is used to dynamically narrow down to our result
         memo.put(n, result);
         return result;
     }
 
     public static void main(String[] args) {
-        int n = 6;
+        int n = 4;
         int result = fibonacci(n);
         System.out.println("Fibonacci of " + n + ": " + result);
     }
