@@ -2,23 +2,21 @@ package logic_building_prog;
 
 import java.util.Scanner;
 
-//An Armstrong Number is a special positive number whose sum of cubes of its digit is equal to that number.
-
-
-
 public class ArmstrongNumber {
 
 	public static boolean isArmStrongNumber(int number) {
-		
+		//input
 		int original=number;
 		int sumOfCubes=0;
 		
+		//process
 		while(number>0) {
 		int temp= number%10; //get last digit
 		number=number/10;// as we dont need last digit we remove it by dividing
 		sumOfCubes=sumOfCubes +(temp*temp*temp);
 		}
-	
+		
+		//output
 		if(sumOfCubes==original) 
 		return true;
 		else
